@@ -1,56 +1,82 @@
-# Welcome to your Expo app 👋
+# Simple Calculator
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A mobile calculator built with Expo, React Native, and TypeScript. The app
+provides a clean portrait layout with number, decimal, arithmetic operator,
+clear, delete, and equals controls.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Addition, subtraction, multiplication, and division
+- Decimal number input
+- Clear (`AC`) and delete (`DEL`) actions
+- Division-by-zero and invalid-result error handling
+- Responsive display sizing for long values
+- Press feedback for calculator buttons
+- Expo Router entry point with Android, iOS, and web support
 
-   ```bash
-   npm install
-   ```
+## Tech stack
 
-2. Start the app
+- Expo SDK 58
+- React Native 0.88
+- React 19
+- TypeScript
+- Expo Router
 
-   ```bash
-   npx expo start
-   ```
+## Project structure
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+src/
+  app/index.tsx                  Calculator screen
+  components/CalculatorButton.tsx Reusable calculator button
+  hooks/useCalculator.ts          Calculator state and interaction logic
+  styles/calculator.styles.ts     Mobile calculator styling
+  utils/calculator.ts             Arithmetic and error handling
+assets/
+  evidence/calculator-result.jpg  App evidence screenshot
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+## Getting started
 
-### Other setup steps
+### Prerequisites
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+- Node.js
+- npm
+- Expo Go, an Android emulator, an iOS simulator, or a web browser
 
-## Learn more
+### Install dependencies
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npm install
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Start the development server
 
-## Join the community
+```bash
+npx expo start
+```
 
-Join our community of developers creating universal apps.
+From the Expo CLI, scan the QR code with Expo Go or select a simulator/web
+target.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Available commands
+
+```bash
+npm run start    # Start Expo
+npm run android  # Start on Android
+npm run ios      # Start on iOS
+npm run web      # Start in a browser
+npm run lint     # Run Expo ESLint checks
+npx tsc --noEmit # Type-check the project
+```
+
+## Evidence
+
+The following screenshot was supplied as evidence of the calculator interface
+and is stored in the repository at
+[`assets/evidence/calculator-result.jpg`](./assets/evidence/calculator-result.jpg).
+
+![Calculator app evidence](./assets/evidence/calculator-result.jpg)
+
+## License
+
+This project is distributed under the license in [`LICENSE`](./LICENSE).
